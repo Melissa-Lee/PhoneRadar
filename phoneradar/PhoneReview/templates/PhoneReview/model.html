@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Phone Model List
+{% endblock %}
+
+{% block content %}
+    <section>
+    <h1>Phone Models</h1>
+
+    {% for model in models %}
+        <li >
+            <h2>
+                <a href="{% url 'PhoneReview:ReviewList' model_slug=model.slug %}">
+                {{ model.model_name }}
+                </a>
+            </h2>
+            <p>Launch date: {{ model.launch_date }}</p>
+            <p>Platform: {{ model.platform }}</p>
+            <p>Model Image: {{ model.image }}</p>
+            
+            
+        </li>
+    {% endfor %}
+
+{% endblock %}
+
+
+                       

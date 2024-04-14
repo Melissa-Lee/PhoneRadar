@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Phone Review
+{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Phone Reviews</h1>
+
+    {% for review in reviews %}
+        <section>
+            <h3>{{ review.article }}</h2>
+            <p>Published Date: {{ review.date_published }}</p>
+            
+        </section>
+    {% endfor %}
+
+</section>
+
+{% endblock %}
+
+
+                       

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Phone Brand List
+{% endblock %}
+
+{% block content %}
+<h1>Phone Brands</h1>
+
+{% for brand in brands %}
+    <li>
+        <h2>
+            <a href="{% url 'PhoneReview:ModelList' brand_slug=brand.slug %}">
+            {{ brand.name }}
+            </a>
+        </h2>
+        <p>Brand origin: {{ brand.origin }}</p>
+        <p>Manufacturing since {{ brand.manufacturing_since }}</p>
+    </li>
+{% endfor %}
+
+{% endblock %}
+
+
+                       
