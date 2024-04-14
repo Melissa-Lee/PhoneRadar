@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Add New Brand
+{% endblock %}
+
+{% block content %}
+<div class = "container">
+    <h1>Add New Brand</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>Existing Phone Brand</h1>
+    <ul>
+        {% for brand in brands %}
+        <li>
+            <p>{{ brand.name }} - {{ brand.origin }} - {{ brand.manufacturing_since }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+<div>
+
+    
+{% endblock %}
+    
+
+
+                       

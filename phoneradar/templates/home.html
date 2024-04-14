@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+    {% comment %} <img src="{% static 'images/background.jpg' %}" alt="Top Banner from Google Image" /> {% endcomment %}
+
+    <div class="sidebar">
+        <h3>Side Navigation Bar</h3>
+        {% block sidebar %}
+        <ul>
+            <li><a href="{% url 'PhoneReview:PhoneReview' %}">Phone Brand List</a></li>
+            <li><a href="{% url 'addbrand:addbrand' %}">Add Phone Brand</a></li>
+            <li><a href="{% url 'addreview:addmodel' %}">Add Phone Model</a></li>
+            <li><a href="{% url 'reviewadd:reviewadd' %}">Add Review</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+{% endblock %}

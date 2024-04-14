@@ -1,0 +1,96 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/background.jpg');
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+.sidebar{
+    float: left;
+    width: 50%;
+}
+
+div {
+    padding: 3%;
+    color: #243448;
+    background-color: #f2f2f2;
+    border: solid-black;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 30px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    margin: 20px;
+}
+
+/* Image styles */
+div img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Adjust image size */
+div img.adjusted-size {
+    width: 200px; /* Set the desired width */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    font-size: 20px;
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Alternating row colors */
+table tr {
+    background-color: #f9f9f997;
+    font-size: 20px;
+}
+
+/* Hover effect on rows */
+table tr:hover {
+    background-color: #f2f2f2;
+}

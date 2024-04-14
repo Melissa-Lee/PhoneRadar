@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Add New Model
+{% endblock %}
+
+{% block content %}
+<div class = "container">
+    <h1>Add New Model</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>Existing Phone Models</h1>
+    <ul>
+        {% for model in models %}
+        <li><p> {{model.model_name}} - {{model.launch_date}} - {{model.platform}} </p>
+        </li>
+        {% endfor %}
+    </ul>
+<div>
+
+    
+{% endblock %}
+    
+
+
+                       
